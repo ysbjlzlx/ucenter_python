@@ -8,7 +8,9 @@ bp = Blueprint("index", __name__)
 
 @bp.route('/')
 def index():
-    db.session.add(User(username="ccc", password="ccc"))
+    user = User(username="ccc")
+    user.password = "cc"
+    db.session.add(user)
     db.session.commit()
     users = User.query.all()
     return jsonify(users)
