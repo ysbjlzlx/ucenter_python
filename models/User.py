@@ -3,7 +3,7 @@ from sqlalchemy.ext.hybrid import hybrid_property
 from dataclasses import dataclass
 import datetime
 from werkzeug.security import check_password_hash, generate_password_hash
-from app import db
+from models import db
 
 
 @dataclass
